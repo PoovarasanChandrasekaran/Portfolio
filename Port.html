@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="Port.css">
+    <script src="https://kit.fontawesome.com/a913d3c4cf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!------------------  header  ---------------------------------->
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/Name.png"  class="logo">
+                <div style="padding-left: 450px;">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+               
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h2>Hi, I'm <span>Poovarasan</span></h2>
+            </div>
+        </div>
+    </div>
+    <!------------------------------   about      -------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/Background Image 1.jpg" style="width: 400px; height: 200px;">
+                </div>
+                <div class="about-col-2">
+                    <h3 style="font-size: 24px;color: aliceblue; font-weight: 600; padding-left: 10px;">About Me</h3>
+                    <p class="value">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, quia explicabo sunt molestias a voluptatibus nulla placeat corrupti! Reiciendis quidem eligendi incidunt suscipit atque rem, totam ipsum libero nesciunt dolores.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <p style="line-height: 28px; padding-left: 20px; font-size: 16px;">
+                            HTML<br>
+                            CSS<br>
+                            Javascript<br>
+                            Bootstrap<br>
+                            Python<br>
+                            WordPress<br>
+
+                            
+                        </p>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul style="line-height: 24px;">
+                            <li>Intenship<br><span>3 month worked on Wordpress as a intenship  in 5x Technologies </span></li>
+                            <li>Present<br><span>Web developer in 5x Technologies   </span></li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul style="line-height: 24px;">
+                            <li>2017-2021<br><span>Studied B.E(Mechanical) in Kongunadu College of Technologies </span></li>
+                            <li>2016-2017<br><span>Studied Grade XII in Shinehill Academy Hr.Sec.School</span></li>
+                            <li>2014-2015<br><span>Studied Grade X in Christ King Matric School</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- ---------------    My Project   ------------------- -->
+    <div class="project">
+        <div class="container">
+            <h3 style="font-size: 32px;color: aliceblue; font-weight: 600; padding:20px 20%;">My Project</h3>
+            <div class="project-list">
+                <div class="col-back-1">
+                    <i class="fa-brands fa-wordpress"></i>
+                    <h3>WordPress Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, quam laborum reprehenderit atque molestias eos sunt.Nulla ipsum voluptate illo, temporibus, minus aliquid deserunt debitis asperiores nostrum tempore corporis error.</p>
+                </div>
+                <div class="col-back-2">
+                    <i class="fa-solid fa-code"></i>
+                    <h3>Web Developer</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, quam laborum reprehenderit atque molestias eos sunt.Nulla ipsum voluptate illo, temporibus, minus aliquid deserunt debitis asperiores nostrum tempore corporis error.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- -------------------- Contact ---------------------->
+    <div class="contact">
+        <div class="container">
+            <h3 style="font-size: 32px;color: aliceblue; font-weight: 600; padding:20px 20%;">Contact</h3>
+            <div class="contact-list">
+                <div class="row-1">
+                    <button type="button" class="button-style-1"><i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;Linkedin</button>
+                    <button type="button" onclick="" class="button-style-2"><i class="fa-regular fa-envelope"></i>&nbsp;&nbsp;E-mail</button>    
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- --------------- Js code -------------------- -->
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+
+    </script>                          
+</body>
+</html>
